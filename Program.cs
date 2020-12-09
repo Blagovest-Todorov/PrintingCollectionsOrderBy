@@ -20,10 +20,12 @@ namespace _04.SortingCollections
             stringNumbers.Add("7");
             stringNumbers.Add("10");
             stringNumbers.Add("-5");
-
-            Console.WriteLine(string.Join(" ", numbers.OrderBy(x=> x))); // printing them sorted ascending !
-
-            Console.WriteLine(string.Join(" ", stringNumbers.OrderBy(x=> x))); //different output than upper print
+            // numbers list is ordered by ascending
+            Console.WriteLine("OrderBy: " + string.Join(" ", numbers.OrderBy(x => x))); // printing them sorted ascending !
+            // here the elements are ordered probabley aphalbethically!
+            Console.WriteLine(string.Join(" ", stringNumbers.OrderBy(x => x)));
+            //different output than upper print
+            Console.WriteLine("OrderByDescending: " + string.Join(" ", numbers.OrderByDescending(x => x)));
         }
     }
 }
